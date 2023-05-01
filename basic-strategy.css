@@ -64,13 +64,40 @@ button {
     font-size: 20px;
     border-radius: 5px;
     border: none;
-    background-color: #4CAF50;
     color: white;
     cursor: pointer;
 }
 
-button:hover {
+.hit:hover {
     background-color: #3e8e41;
+}
+
+.hit {
+    background-color: #4CAF50;
+}
+
+.stand:hover {
+    background-color: #ff4d4d
+}
+
+.stand {
+    background-color: #ff8080
+}
+
+.double:hover {
+    background-color: #ffb3e6
+}
+
+.double {
+    background-color: #ffccee
+}
+
+.split:hover {
+    background-color: #66b3ff
+}
+
+.split {
+    background-color: #99ccff
 }
 
 body {

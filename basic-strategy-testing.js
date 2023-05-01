@@ -71,7 +71,7 @@ function verifyAnswer(playerAction) {
         document.getElementById("message").classList.remove('hidden')
         document.getElementById("message").innerHTML = "Incorrect. The right answer is "+ getEnglishBestHand(currentHand.correctAction);
         document.getElementById("message").style.color = 'red';
-        timeoutLength = 3000;
+        timeoutLength = 2500;
     }
 
     document.getElementById("score-message").innerHTML = "Current Score: " + score + "/" + maxScore;
