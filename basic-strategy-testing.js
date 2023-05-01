@@ -44,8 +44,24 @@ renderDealerDeck(getDeck());
 renderPlayerDeck(getDeck());
 let currentHand = getNewHand(shuffledDeckIndex);
 
+function getEnglishBestHand(action) {
+    if(action === "S") {
+        return "STAND";
+    }
+    else if(action === "H") {
+        return "HIT";
+    }
+    else if(action === "D") {
+        return "DOUBLE";
+    }
+    else {
+        return "SPLIT";
+    }
+}
+
 
 function verifyAnswer(playerAction) {
+    let timeoutLength = 500;
     if(playerAction === currentHand.correctAction) {
         document.getElementById("message").classList.remove('hidden')
         document.getElementById("message").innerHTML = "Correct!";
@@ -53,9 +69,12 @@ function verifyAnswer(playerAction) {
         score++;
     } else {
         document.getElementById("message").classList.remove('hidden')
-        document.getElementById("message").innerHTML = "Incorrect. The right answer is "+ currentHand.correctAction;
+        document.getElementById("message").innerHTML = "Incorrect. The right answer is "+ getEnglishBestHand(currentHand.correctAction);
         document.getElementById("message").style.color = 'red';
+        timeoutLength = 3000;
     }
+
+    document.getElementById("score-message").innerHTML = "Current Score: " + score + "/" + maxScore;
 
     setTimeout(function() {
         document.getElementById("split").classList.add('hidden')
@@ -63,7 +82,7 @@ function verifyAnswer(playerAction) {
         document.querySelectorAll('.card').forEach(card=> {
             card.classList.add('hidden');
         })
-        if(shuffledDeckIndex > maxScore) {
+        if(shuffledDeckIndex >= maxScore) {
             document.getElementById("message").classList.remove('hidden')
             document.getElementById("message").innerHTML = "All done! You scored " + score + " out of " + maxScore;
             document.getElementById("message").style.color = 'green';
@@ -71,7 +90,7 @@ function verifyAnswer(playerAction) {
         }
         shuffledDeckIndex++;
         currentHand = getNewHand(shuffledDeckIndex);
-    }, 1000)
+    }, timeoutLength)
 
 }
  
