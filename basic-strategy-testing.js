@@ -123,6 +123,10 @@ function displayPlayerHand(hand) {
         document.querySelector(`.player-card-${card2Value}-${getRandomSuit()}`).classList.remove('hidden')
     }
     else if(hand.charAt(0)=="A") {
+        if(hand.charAt(1) == "A") {
+            //give option to split
+            document.getElementById("split").classList.remove('hidden')
+        }
         document.querySelector(`.player-card-A-${getRandomSuit()}`).classList.remove('hidden')
         document.querySelector(`.player-card-${hand.charAt(1)}-${getRandomSuit()}`).classList.remove('hidden')
     }
