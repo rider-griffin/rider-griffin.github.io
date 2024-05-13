@@ -1,0 +1,119 @@
+.container {
+    background-color: #ffc2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.pump {
+    width: 200px;
+    height: 400px;
+    background-color: white;
+    position: relative;
+    border: 4px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.meter {
+    width: 100%;
+    height: 0;
+    background-color: #994888;
+    position: absolute;
+    bottom: 0;
+    border-radius: 20px;
+    transition: height 0.2s;
+}
+
+.message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    display: none;
+}
+
+.next-button {
+    padding: 10px 20px;
+    background-color: #8e44ad;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.next-button:hover {
+    background-color: #663399;
+}
+
+.message-2 {
+    width: 40%;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.message-3 {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+}
+
+.police-gun {
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+}
+
+.police-gun:hover {
+    cursor: pointer;
+}
+
+.anime-girl {
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.spongebob {
+    width: 250px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.xqc {
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.no-button {
+    position: absolute;
+    padding: 10px 20px;
+    background-color: #8e44ad;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    top: 68%;
+    left: 55%;
+}
