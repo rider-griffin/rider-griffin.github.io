@@ -19,6 +19,9 @@ const kawaii = document.getElementById("kawaii-cute-gif");
 const message3 = document.getElementById("message-3");
 const dattebayo = document.getElementById("dattebayo");
 const araara = document.getElementById("araara");
+const xqcThumbs = document.getElementById("xqc-thumbsup");
+const angryAnime = document.getElementById("angry-anime");
+const kiss = document.getElementById("kiss");
 
 let charge = 0;
 let jumpCounter = 0;
@@ -37,6 +40,9 @@ xqc.style.display = "none";
 noButton.style.display = "none";
 kawaii.style.display = "none";
 message3.style.display = "none";
+xqcThumbs.style.display = "none";
+angryAnime.style.display = "none";
+kiss.style.display = "none";
 
 function pumpCharge() {
   charge += Math.floor(Math.random() * 6) + 1;
@@ -105,7 +111,8 @@ function page4() {
   spongebob.style.display = "none";
   xqc.style.display = "block";
   setTimeout(() => {
-    xqc.innerHTML = `<img src="xqc-thumbsgif.gif" alt="xqc2"/>`;
+    xqc.style.display = "none";
+    xqcThumbs.style.display = "block";
   }, 3000);
   nextButton.innerText = "ok";
   xqcSmash.play();
@@ -118,6 +125,7 @@ function page4() {
 
 function page5() {
   xqc.style.display = "none";
+  xqcThumbs.style.display = "none";
   message2.innerText = "will u be my gf?";
   message2.style.fontSize = "26px";
   message2.style.width = "65%";
@@ -132,9 +140,11 @@ function page5() {
 
 function finalPage() {
   noButton.style.display = "none";
+  kawaii.style.display = "none";
+  angryAnime.style.display = "none";
   message3.innerText = "the end. (refresh page to play again)";
   message2.innerText = "i knew u would say yes <3";
-  kawaii.innerHTML = `<img src="loved-it-kiss.gif" alt="love"/>`;
+  kiss.style.display = "block";
   nextButton.style.display = "none";
   araara.play();
 }
@@ -148,7 +158,8 @@ function jump() {
 
   if (jumpCounter > 2) {
     message3.innerText = "just click yes already! 0.o";
-    kawaii.innerHTML = `<img src="menhera-chan.gif" alt="kawaii-cute2-gif"/>`;
+    kawaii.style.display = "none";
+    angryAnime.style.display = "block";
     dattebayo.play();
   }
 }
