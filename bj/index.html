@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blackjack Basic Strategy Practice</title>
+    <link rel="stylesheet" href="basic-strategy.css" />
+  </head>
+
+  <body>
+    <h1>Blackjack Basic Strategy Practice</h1>
+    <h2>Rapid Mode</h2>
+    <label class="switch">
+      <input type="checkbox" id="rapid-mode-checkbox" checked />
+      <span class="slider round"></span>
+    </label>
+
+    <div class="output-message">
+      <p id="score-message">Current Score: 0/280</p>
+    </div>
+    <div class="container">
+      <div id="dealer-hand" class="hand">
+        <div>(Dealer's Upcard)</div>
+        <div class="deck">
+          <div id="dealer-deck-upcard"></div>
+        </div>
+      </div>
+
+      <div id="player-hand" class="hand">
+        <div>(Player's Hand)</div>
+        <div class="deck">
+          <div id="player-deck-upcards"></div>
+        </div>
+      </div>
+      <div class="action-buttons">
+        <button class="hit" id="hit" onclick="verifyAnswer('H');" data-type="D">
+          Hit
+        </button>
+        <button
+          class="stand"
+          id="stand"
+          onclick="verifyAnswer('S');"
+          data-type="S"
+        >
+          Stand
+        </button>
+        <button
+          class="double"
+          id="double"
+          onclick="verifyAnswer('D');"
+          data-type="D"
+        >
+          Double
+        </button>
+        <button
+          class="split"
+          id="split"
+          onclick="verifyAnswer('P');"
+          data-type="P"
+        >
+          Split
+        </button>
+      </div>
+      <div class="output-message">
+        <p id="message"></p>
+      </div>
+      <div class="wrong-answers">
+        <p>Incorrect Answers</p>
+      </div>
+    </div>
+    <script src="basic-strategy-testing.js"></script>
+  </body>
+</html>
