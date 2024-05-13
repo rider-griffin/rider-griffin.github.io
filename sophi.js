@@ -104,6 +104,9 @@ function page4() {
   animeGirl.style.display = "none";
   spongebob.style.display = "none";
   xqc.style.display = "block";
+  setTimeout(() => {
+    xqc.innerHTML = `<img src="xqc-thumbsgif.gif" alt="xqc2"/>`;
+  }, 3000);
   nextButton.innerText = "ok";
   xqcSmash.play();
   setTimeout(() => {
